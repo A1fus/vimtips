@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "vimtip-daily"
+version = "0.1.0"
+description = "A daily Vim and Neovim command tip"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = []
+license = {file = "LICENSE"}
+
+[project.scripts]
+vimtip = "vimtip:main"
+
+[tool.setuptools]
+py-modules = ["vimtip"]
+
+[tool.pyright]
+pythonVersion = "3.9"
+typeCheckingMode = "strict"
+include = ["vimtip.py", "tests"]
